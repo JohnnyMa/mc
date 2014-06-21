@@ -38,6 +38,14 @@ class SiteController extends Controller
 	}
 
 	/**
+	 * Logs out the current user and redirect to homepage.
+	 */
+	public function actionIndex()
+	{
+		$this->actionLogin();
+	}
+
+	/**
 	 * Displays the contact page
 	 */
 	public function actionContact()

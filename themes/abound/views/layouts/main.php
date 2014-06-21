@@ -3,11 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>abound - Yii theme</title>
+    <title>Micro Credit System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free yii themes, free web application theme">
-    <meta name="author" content="Webapplicationthemes.com">
-	<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+    <meta name="description" content="another jma system">
+    <meta name="author" content="jma">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

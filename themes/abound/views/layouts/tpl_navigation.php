@@ -8,18 +8,20 @@
           </a>
      
           <!-- Be sure to leave the brand out there if you want it shown -->
-          <a class="brand" href="#">abound <small>admin theme v1.1</small></a>
+          <a class="brand" href="#">jma</a>
           
           <div class="nav-collapse">
+
 			<?php $this->widget('zii.widgets.CMenu',array(
                     'htmlOptions'=>array('class'=>'pull-right nav'),
                     'submenuHtmlOptions'=>array('class'=>'dropdown-menu'),
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
                     'items'=>array(
-                        array('label'=>'Dashboard', 'url'=>array('/site/index')),
-                        array('label'=>'Graphs & Charts', 'url'=>array('/site/page', 'view'=>'graphs')),
+                        array('label'=>'Login', 'url'=>array('/site/index'), 'visible'=>Yii::app()->user->isGuest),
+                        array('label'=>'Graphs & Charts', 'url'=>array('/site/page', 'view'=>'graphs'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label'=>'Forms', 'url'=>array('/site/page', 'view'=>'forms')),
+                        array('label'=>'Concat', 'url'=>array('/site/contact')),
                         array('label'=>'Tables', 'url'=>array('/site/page', 'view'=>'tables')),
 						array('label'=>'Interface', 'url'=>array('/site/page', 'view'=>'interface')),
                         array('label'=>'Typography', 'url'=>array('/site/page', 'view'=>'typography')),
