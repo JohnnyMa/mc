@@ -18,13 +18,21 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
                     'items'=>array(
-                        array('label'=>'Login', 'url'=>array('/site/index'), 'visible'=>Yii::app()->user->isGuest),
+                        /*
                         array('label'=>'Graphs & Charts', 'url'=>array('/site/page', 'view'=>'graphs'), 'visible'=>!Yii::app()->user->isGuest),
-                        array('label'=>'Forms', 'url'=>array('/site/page', 'view'=>'forms')),
-                        array('label'=>'Concat', 'url'=>array('/site/contact')),
-                        array('label'=>'Tables', 'url'=>array('/site/page', 'view'=>'tables')),
-						array('label'=>'Interface', 'url'=>array('/site/page', 'view'=>'interface')),
-                        array('label'=>'Typography', 'url'=>array('/site/page', 'view'=>'typography')),
+                        array('label'=>'Forms', 'url'=>array('/site/page', 'view'=>'forms'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Concat', 'url'=>array('/site/contact'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Tables', 'url'=>array('/site/page', 'view'=>'tables'), 'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Interface', 'url'=>array('/site/page', 'view'=>'interface'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Typography', 'url'=>array('/site/page', 'view'=>'typography'), 'visible'=>!Yii::app()->user->isGuest),
+                        */
+
+                        array('label'=>Yii::t('nav_customer_mgmt', 'aa'), 'url'=>array('/customer/index'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Loan Mgmt', 'url'=>array('/loan/index'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Task Mgmt', 'url'=>array('/task/index'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Report Mgmt', 'url'=>array('/report/index'), 'visible'=>!Yii::app()->user->isGuest),
+                        array('label'=>'Admin Mgmt', 'url'=>array('/admin/view'), 'visible'=>!Yii::app()->user->isGuest),
+
                         /*array('label'=>'Gii generated', 'url'=>array('customer/index')),*/
                         array('label'=>'My Account <span class="caret"></span>', 'url'=>'#','itemOptions'=>array('class'=>'dropdown','tabindex'=>"-1"),'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>"dropdown"), 
                         'items'=>array(
@@ -33,7 +41,7 @@
 							array('label'=>'My Invoices <span class="badge badge-info pull-right">12</span>', 'url'=>'#'),
 							array('label'=>'Separated link', 'url'=>'#'),
 							array('label'=>'One more separated link', 'url'=>'#'),
-                        )),
+                        ), 'visible'=>!Yii::app()->user->isGuest),
                         array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                         array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
                     ),
