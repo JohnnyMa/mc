@@ -1,5 +1,6 @@
 assets/*
 runtime/*
 .htaccess
-
+.project
+.settings/*
 
