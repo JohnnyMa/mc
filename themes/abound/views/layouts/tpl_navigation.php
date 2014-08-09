@@ -23,10 +23,22 @@
     array('label' => Yii::t('Common', 'nav_daily_mgmt'), 'url' => array('/task/index'), 'visible' => !Yii::app() -> user -> isGuest), 
     array('label' => Yii::t('Common', 'nav_report_mgmt'), 'url' => array('/report/index'), 'visible' => !Yii::app() -> user -> isGuest), 
     array('label' => Yii::t('Common', 'nav_customer_mgmt'), 'url' => array('/admin/view'), 'visible' => !Yii::app() -> user -> isGuest),
-    array('label' => Yii::t('Common', 'nav_system_mgmt'), 'url' => array('/admin/view'), 'visible' => Yii::app() -> user -> isGuest),
+    array('label' => Yii::t('Common', 'nav_system_mgmt'), 'url' => array('/admin/view'), 'visible' => !Yii::app() -> user -> isGuest),
 
     /*array('label'=>'Gii generated', 'url'=>array('customer/index')),*/
-    array('label' => 'My Account <span class="caret"></span>', 'url' => '#', 'itemOptions' => array('class' => 'dropdown', 'tabindex' => "-1"), 'linkOptions' => array('class' => 'dropdown-toggle', 'data-toggle' => "dropdown"), 'items' => array( array('label' => 'My Messages <span class="badge badge-warning pull-right">26</span>', 'url' => '#'), array('label' => 'My Tasks <span class="badge badge-important pull-right">112</span>', 'url' => '#'), array('label' => 'My Invoices <span class="badge badge-info pull-right">12</span>', 'url' => '#'), array('label' => 'Separated link', 'url' => '#'), array('label' => 'One more separated link', 'url' => '#'), ), 'visible' => !Yii::app() -> user -> isGuest), array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app() -> user -> isGuest), array('label' => 'Logout (' . Yii::app() -> user -> name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app() -> user -> isGuest), ), ));
+    array('label' => Yii::t('Common', 'nav_my_account') . ' <span class="caret"></span>', 
+          'url' => '#', 
+          'itemOptions' => array('class' => 'dropdown', 'tabindex' => "-1"), 
+          'linkOptions' => array('class' => 'dropdown-toggle', 'data-toggle' => "dropdown"), 
+          'items' => array( array('label' => 'My Messages <span class="badge badge-warning pull-right">26</span>', 'url' => '#'), 
+          array('label' => 'My Tasks <span class="badge badge-important pull-right">112</span>', 'url' => '#'), 
+          array('label' => 'My Invoices <span class="badge badge-info pull-right">12</span>', 'url' => '#'), 
+          array('label' => 'Separated link', 'url' => '#'), 
+          array('label' => 'One more separated link', 'url' => '#'), ), 'visible' => !Yii::app() -> user -> isGuest), 
+          array('label' => Yii::t('Common', 'login'), 'url' => array('/site/login'), 'visible' => Yii::app() -> user -> isGuest), 
+          array('label' => Yii::t('Common', 'logout') . ' (' . Yii::app() -> user -> name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app() -> user -> isGuest), 
+          ), 
+         ));
                 ?>
             </div>
         </div>
@@ -47,9 +59,9 @@
                 <a href="javascript:chooseStyle('style7', 60)"><span class="style" style="background-color:#a30c22;"></span></a>
             </div>
             <form class="navbar-search pull-right" action="">
-
+<!--
                 <input type="text" class="search-query span2" placeholder="Search">
-
+-->
             </form>
         </div><!-- container -->
     </div><!-- navbar-inner -->

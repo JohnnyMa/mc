@@ -10,6 +10,7 @@ return array(
     'nav_daily_mgmt' => '日终处理', 
     'nav_report_mgmt' => '报表管理', 
     'nav_system_mgmt' => '系统管理', 
+    'nav_my_account' => '我的账户',
     
     //login form
     'auto_login_next_time' => '下次自动登录 ', 
@@ -17,6 +18,7 @@ return array(
     'username' => '用户名',
     'password' => '密码',
     'login' => '登录',
+    'logout' => '退出',
 
     'nav_customer_mgmt' => '客户信息管理', 
     'nav_customer_mgmt' => '客户信息管理', 
